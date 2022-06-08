@@ -1,0 +1,75 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-bg-color: #247881;
+    --secondary-bg-color: #00FFC6;
+    --title-color: #F7D716;
+    --main-color: #fff;
+    --button-color: #30aadd;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    width: auto;
+    height: 50px;
+    background-color: var(--main-bg-color);
+}
+
+.navlink {
+    text-decoration: none;
+    color: var(--title-color);
+    font-size: 24px;
+    font-weight: 700;
+    margin: auto 10px;
+}
+
+.navlink:hover {
+    background-color: var(--secondary-bg-color);
+}
+
+.nav-home {
+    width: 75vw;
+    flex: auto;
+    text-align: right;
+}
+
+.nav-about,
+.nav-projects,
+.nav-contact {
+    flex: none;
+}
+
+@media (max-width: 500px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav-home {
+        text-align: center;
+    }
+}
